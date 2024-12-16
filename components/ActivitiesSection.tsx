@@ -2,31 +2,32 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import BookingModal from './BookingModal';
+import { getImagePath } from '@/utils/imagePath';
 
 const activityOptions = [
   {
     name: 'Bonfire Night',
-    price: 'PKR 5,000/group',
-    description: 'Evening bonfire with traditional music and snacks',
-    image: '/images/bone-fire.jpg',
+    price: 'PKR 2,000/person',
+    description: 'Enjoy a cozy evening under the stars with traditional music and BBQ.',
+    image: getImagePath('/images/bonfire.jpg'),
   },
   {
     name: 'Hill Hiking',
     price: 'PKR 3,000/person',
-    description: 'Guided hiking tour to nearby hills with stunning views',
-    image: '/images/view-from-hill.jpg',
+    description: 'Guided hiking tours to nearby peaks with stunning valley views.',
+    image: getImagePath('/images/hiking.jpg'),
   },
   {
     name: 'Sightseeing Tour',
-    price: 'PKR 8,000/group',
-    description: 'Full-day tour to popular attractions in Skardu',
-    image: '/images/trip-group.jpg',
+    price: 'PKR 5,000/person',
+    description: 'Visit popular attractions including Shangrila, Upper Kachura Lake, and Manthal Buddha Rock.',
+    image: getImagePath('/images/sightseeing.jpg'),
   },
   {
     name: 'Cultural Experience',
-    price: 'PKR 4,000/person',
-    description: 'Traditional Balti cultural activities and demonstrations',
-    image: '/images/view-from-top.jpg',
+    price: 'PKR 2,500/person',
+    description: 'Immerse yourself in local Balti culture with traditional music and dance performances.',
+    image: getImagePath('/images/cultural.jpg'),
   },
 ];
 
@@ -40,7 +41,7 @@ export default function ActivitiesSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(/images/roof-view.jpg)'
+            backgroundImage: `url(${getImagePath('/images/activities-bg.jpg')})`
           }}
         />
         <div className="absolute inset-0 bg-black/50" />
@@ -54,10 +55,10 @@ export default function ActivitiesSection() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-white text-center mb-12"
         >
-          Activities & Experiences
+          Activities
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {activityOptions.map((activity, index) => (
             <motion.div
               key={activity.name}
@@ -68,7 +69,7 @@ export default function ActivitiesSection() {
               className="bg-white/10 backdrop-blur-md rounded-lg overflow-hidden"
             >
               <div 
-                className="h-48 sm:h-64 bg-cover bg-center transform transition-transform duration-500 hover:scale-110"
+                className="h-48 sm:h-64 bg-cover bg-center"
                 style={{ backgroundImage: `url(${activity.image})` }}
               />
               <div className="p-4 sm:p-6">

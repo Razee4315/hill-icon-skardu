@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import BookingModal from './BookingModal';
+import { getImagePath } from '@/utils/imagePath';
 
 const tableOptions = [
   {
@@ -36,7 +37,7 @@ export default function RestaurantSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(/images/mess.jpg)'
+            backgroundImage: `url(${getImagePath('/images/mess.jpg')})`
           }}
         />
         <div className="absolute inset-0 bg-black/50" />

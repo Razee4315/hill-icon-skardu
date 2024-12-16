@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import BookingModal from './BookingModal';
+import { getImagePath } from '@/utils/imagePath';
 
 export default function HeroSection() {
   const [bookingType, setBookingType] = useState<'room' | 'restaurant' | 'activity' | null>(null);
@@ -17,7 +18,7 @@ export default function HeroSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(/images/front-view.jpg)'
+            backgroundImage: `url(${getImagePath('/images/front-view.jpg')})`
           }}
         />
         <div className="absolute inset-0 bg-black/50" />

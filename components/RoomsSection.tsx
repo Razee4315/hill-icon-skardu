@@ -2,25 +2,26 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import BookingModal from './BookingModal';
+import { getImagePath } from '@/utils/imagePath';
 
 const roomOptions = [
   {
     name: 'Deluxe Room',
     price: 'PKR 15,000/night',
     description: 'Spacious room with mountain view, king-size bed, and modern amenities.',
-    image: '/images/room-deluxe.jpg',
+    image: getImagePath('/images/room-deluxe.jpg'),
   },
   {
     name: 'Queen Room',
     price: 'PKR 12,000/night',
     description: 'Comfortable room with queen-size bed and private bathroom.',
-    image: '/images/double-bed-queen.jpg',
+    image: getImagePath('/images/double-bed-queen.jpg'),
   },
   {
     name: 'Double Room',
     price: 'PKR 10,000/night',
     description: 'Cozy room with two single beds, perfect for friends or family.',
-    image: '/images/double-bed.jpg',
+    image: getImagePath('/images/double-bed.jpg'),
   },
 ];
 
@@ -34,7 +35,7 @@ export default function RoomsSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(/images/view-from-top.jpg)'
+            backgroundImage: `url(${getImagePath('/images/view-from-top.jpg')})`
           }}
         />
         <div className="absolute inset-0 bg-black/50" />
