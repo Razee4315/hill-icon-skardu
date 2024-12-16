@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { getImagePath } from '@/utils/imagePath';
 
 export default function ContactSection() {
   const [ref, inView] = useInView({
@@ -15,7 +16,7 @@ export default function ContactSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(/images/reciption.jpg)'
+            backgroundImage: `url(${getImagePath('/images/reciption.jpg')})`
           }}
         />
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
