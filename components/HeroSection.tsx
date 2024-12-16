@@ -18,7 +18,7 @@ export default function HeroSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url(${getImagePath('/images/front-view.jpg')})`
+            backgroundImage: `url(${getImagePath('/images/front.jpg')})`
           }}
         />
         <div className="absolute inset-0 bg-black/50" />

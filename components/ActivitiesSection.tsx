@@ -9,25 +9,25 @@ const activityOptions = [
     name: 'Bonfire Night',
     price: 'PKR 2,000/person',
     description: 'Enjoy a cozy evening under the stars with traditional music and BBQ.',
-    image: getImagePath('/images/bonfire.jpg'),
+    image: getImagePath('/images/bone-fire.jpg'),
   },
   {
     name: 'Hill Hiking',
     price: 'PKR 3,000/person',
     description: 'Guided hiking tours to nearby peaks with stunning valley views.',
-    image: getImagePath('/images/hiking.jpg'),
+    image: getImagePath('/images/view-from-hill.jpg'),
   },
   {
     name: 'Sightseeing Tour',
     price: 'PKR 5,000/person',
     description: 'Visit popular attractions including Shangrila, Upper Kachura Lake, and Manthal Buddha Rock.',
-    image: getImagePath('/images/sightseeing.jpg'),
+    image: getImagePath('/images/trip-group.jpg'),
   },
   {
     name: 'Cultural Experience',
     price: 'PKR 2,500/person',
     description: 'Immerse yourself in local Balti culture with traditional music and dance performances.',
-    image: getImagePath('/images/cultural.jpg'),
+    image: getImagePath('/images/group-pic.jpg'),
   },
 ];
 
@@ -41,7 +41,7 @@ export default function ActivitiesSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url(${getImagePath('/images/activities-bg.jpg')})`
+            backgroundImage: `url(${getImagePath('/images/roof-view.jpg')})`
           }}
         />
         <div className="absolute inset-0 bg-black/50" />
