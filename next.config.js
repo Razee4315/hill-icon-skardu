@@ -1,13 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-    ],
+    unoptimized: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/hill-icon-skardu' : '',
 }
 
 module.exports = nextConfig

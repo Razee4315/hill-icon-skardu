@@ -25,6 +25,11 @@ export default function RestaurantSection() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(tableOptions[0]);
 
+  const handleBooking = (option: typeof tableOptions[0]) => {
+    setSelectedOption(option);
+    setIsBookingOpen(true);
+  };
+
   return (
     <section id="restaurant" className="relative min-h-screen py-20">
       <div className="absolute inset-0">
@@ -64,7 +69,7 @@ export default function RestaurantSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setIsBookingOpen(true)}
+              onClick={() => handleBooking(tableOptions[0])}
               className="w-full sm:w-auto bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
             >
               Book a Table
